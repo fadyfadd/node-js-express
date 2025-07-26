@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const {getAllCustomers} = require('../business-layers/customer')
+const {getAllCustomers} = require('../business-layers/customer-business-layer')
  
 
 router.get('/all' , async (req , resp , next)=>{
