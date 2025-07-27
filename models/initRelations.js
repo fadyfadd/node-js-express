@@ -1,7 +1,10 @@
-module.exports = ({ Customer, Order, Employee, Territory, EmployeeTerritory }) => {
+module.exports = ({ Customer, Order, Employee, Territory, EmployeeTerritory, OrderDetail }) => {
 
   Customer.hasMany(Order, { foreignKey: 'customer_id' });
   Order.belongsTo(Customer, { foreignKey: 'customer_id' });
+
+  Order.hasMany(OrderDetail, { foreignKey: 'order_id' })
+  OrderDetail.belongsTo(Order, { foreignKey: 'order_id' })
 
   Employee.belongsToMany(Territory, {
     through: EmployeeTerritory,
