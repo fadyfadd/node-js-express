@@ -1,6 +1,9 @@
+const Employee = require("../models/employee");
+
  
 const getAllEmpoyees = async ()=> {
-    return null;
+  const employees = await Employee.findAll();
+  return employees
 };
 
 module.exports = {getAllEmpoyees}
