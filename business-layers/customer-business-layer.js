@@ -1,9 +1,9 @@
-const Customer  = require('../models/customer');
+const Customer = require('../models/customer');
 const Order = require('../models/order');
 
-const getAllCustomers = async ()=> {
-    const customers = await Customer.findAll({include:[{model:Order}]});
+const getAllCustomers = async () => {
+    const customers = await Customer.findAll({ include: [{ model: Order }] });
     return customers;
 };
 
-module.exports = {getAllCustomers}
+module.exports = { getAllCustomers }

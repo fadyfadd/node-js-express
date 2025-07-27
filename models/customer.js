@@ -3,7 +3,7 @@ const sequelize = require('../lib/sequalize');
 
 const Customer = sequelize.define('Customer', {
   customerId: {
-    type: DataTypes.STRING,   
+    type: DataTypes.STRING,
     primaryKey: true,
     allowNull: false,
     field: 'customer_id',

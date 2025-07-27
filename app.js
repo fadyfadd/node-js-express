@@ -19,11 +19,11 @@ const orderRouter = require('./routes/order-route')
 const customerRouter = require('./routes/customer-route')
 const employeeRouter = require('./routes/employee-router');
 
- 
-app.use('/order' ,orderRouter);
-app.use('/customer' , customerRouter)
-app.use('/employee' , employeeRouter)
- 
- 
-require('./models/initRelations')({Customer , Order ,Employee , Territory ,EmployeeTerritory });
+
+app.use('/order', orderRouter);
+app.use('/customer', customerRouter)
+app.use('/employee', employeeRouter)
+
+
+require('./models/initRelations')({ Customer, Order, Employee, Territory, EmployeeTerritory });
 app.listen(8081)
