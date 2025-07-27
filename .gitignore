@@ -1,10 +1,10 @@
-# Dependencias
+
 node_modules/
 bower_components/
 jspm_packages/
 web_modules/
 
-# Logs
+ 
 logs
 *.log
 npm-debug.log*
@@ -12,12 +12,12 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
-# Archivos de entorno
+ 
 .env
 .env.*
 !.env.example
 
-# Cachés y salidas de build
+ 
 .cache/
 .parcel-cache/
 .next/
