@@ -11,6 +11,9 @@ require('dotenv').config({
 
 const Customer = require('./models/customer')
 const Order = require('./models/order')
+const Employee = require('./models/employee')
+const Territory = require('./models/territory')
+const EmployeeTerritory = require('./models/employee_territory')
 
 const orderRouter = require('./routes/order-route')
 const customerRouter = require('./routes/customer-route')
@@ -22,5 +25,5 @@ app.use('/customer' , customerRouter)
 app.use('/employee' , employeeRouter)
  
  
-const initRelations = require('./models/initRelations')({Customer , Order});
+require('./models/initRelations')({Customer , Order ,Employee , Territory ,EmployeeTerritory });
 app.listen(8081)
