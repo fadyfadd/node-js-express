@@ -12,6 +12,4 @@ const all_orders_by_customer = router.get('/by-customer/:customerid', (req, resp
     resp.send('by customoer id middleware')
 })
 
-
-
 module.exports = router

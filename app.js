@@ -15,6 +15,7 @@ const Employee = require('./models/employee')
 const Territory = require('./models/territory')
 const EmployeeTerritory = require('./models/employee_territory')
 const OrderDetail = require('./models/order-detail')
+const Product = require('./models/product')
 
 const orderRouter = require('./routes/order-route')
 const customerRouter = require('./routes/customer-route')
@@ -26,5 +27,5 @@ app.use('/customer', customerRouter)
 app.use('/employee', employeeRouter)
 
 
-require('./models/initRelations')({ Customer, Order, Employee, Territory, EmployeeTerritory, OrderDetail });
+require('./models/init-relationships')({ Customer, Order, Employee, Territory, EmployeeTerritory, OrderDetail, Product });
 app.listen(8081)
